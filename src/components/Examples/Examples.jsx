@@ -2,7 +2,7 @@ import { useState } from "react";
 import TabButton from "../TabButton";
 import { EXAMPLES } from "../../data.js";
 import Sections from "../Sections";
-import Tabs from "./Tabs";
+import Tabs from "../Tabs.jsx";
 import "./Examples.css";
 
 export default function Examples() {
@@ -23,8 +23,9 @@ export default function Examples() {
     );
   }
   return (
-    <Sections title="Exsamples" id="examples">
+    <Sections title="Examples" id="examples">
       <Tabs
+        Container="menu"
         buttons={
           <>
             <TabButton
@@ -56,7 +57,6 @@ export default function Examples() {
       >
         {tabContent}
       </Tabs>
-      <menu></menu>
     </Sections>
   );
 }
